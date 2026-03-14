@@ -43,36 +43,62 @@
 
 ```mermaid
 stateDiagram-v2
-    [*] --> START
+    direction LR
+    [*] --> 0: START
     
-    START --> ID_KEYWORD: буква
-    START --> NUMBER: цифра
-    START --> OPERATOR_SINGLE: '+', '-', '*', '/', ';', '(', ')'
-    START --> OPERATOR_ASSIGN: '='
-    START --> OPERATOR_COMPARE: '<', '>', '!'
-    START --> DELIMITER: пробел, табуляция, '\n'
-    START --> ERROR: другой символ
+    0 --> 1: fun
+    0 --> 2: return
+    0 --> 3: id
+    0 --> 4: ,
+    0 --> 5: (
+    0 --> 6: )
+    0 --> 7: {
+    0 --> 8: }
+    0 --> 9: ;
+    0 --> 10: =
+    0 --> 11: +
+    0 --> 12: -
+    0 --> 13: *
+    0 --> 14: /
+    0 --> 15: пробел
     
-    ID_KEYWORD --> ID_KEYWORD: буква, цифра
-    ID_KEYWORD --> FINISH: не буква/цифра
+    1 --> 20: code = 1 (fun)
+    2 --> 20: code = 2 (return)
+    3 --> 20: code = 3 (id)
     
-    NUMBER --> NUMBER: цифра
-    NUMBER --> FINISH: не цифра
+    3 --> 16: i32
+    3 --> 17: i64
+    3 --> 18: f32
+    3 --> 19: f64
+    3 --> 20: bool
     
-    OPERATOR_SINGLE --> FINISH: любой символ
+    16 --> 21: code = 10 (i32)
+    17 --> 21: code = 11 (i64)
+    18 --> 21: code = 12 (f32)
+    19 --> 21: code = 13 (f64)
+    20 --> 21: code = 14 (bool)
     
-    OPERATOR_ASSIGN --> OPERATOR_EQUAL: '='
-    OPERATOR_ASSIGN --> FINISH: не '='
+    4 --> 21: code = 4 (,)
+    5 --> 21: code = 5 (()
+    6 --> 21: code = 6 ())
+    7 --> 21: code = 7 ({)
+    8 --> 21: code = 8 (})
+    9 --> 21: code = 9 (;)
+    10 --> 21: code = 15 (=)
+    11 --> 21: code = 16 (+)
+    12 --> 21: code = 17 (-)
+    13 --> 21: code = 18 (*)
+    14 --> 21: code = 19 (/)
+    15 --> 21: code = 20 (пробел)
     
-    OPERATOR_COMPARE --> OPERATOR_COMPARE_EQUAL: '='
-    OPERATOR_COMPARE --> FINISH: не '='
+    21 --> 22: следующий символ
+    22 --> 0
     
-    OPERATOR_EQUAL --> FINISH: любой символ
-    OPERATOR_COMPARE_EQUAL --> FINISH: любой символ
+    0 --> ERROR: [^] недопустимый символ
+    ERROR --> 0: пропуск
     
-    DELIMITER --> DELIMITER: пробел, табуляция, '\n'
-    DELIMITER --> FINISH: не разделитель
-    
-    ERROR --> FINISH: любой символ
-    
-    FINISH --> [*]
+    note right of 0: Начальное состояние
+    note right of 3: Идентификатор
+    note right of 20: Ключевые слова
+    note right of 21: Формирование лексемы
+    note right of 22: Возврат к началу
