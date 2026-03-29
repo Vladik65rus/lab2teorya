@@ -45,5 +45,5 @@
 
 ### Программа
 
-****<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/a1a55db6-fe1e-4cfa-ac21-243ea93cf9f0" />
+<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/a1a55db6-fe1e-4cfa-ac21-243ea93cf9f0" />
 
