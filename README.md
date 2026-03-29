@@ -40,4 +40,7 @@
 3. `float price = 99; while (price > 0) { price = price - 10; }`
 
 ## 🔄 Диаграмма состояний
+<img width="1451" height="1788" alt="Диаграмма без названия drawio (9)" src="https://github.com/user-attachments/assets/9c8098bd-c975-4c85-b038-3b549251a0a8" />
+## Программа
+****<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/a1a55db6-fe1e-4cfa-ac21-243ea93cf9f0" />
 
