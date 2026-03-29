@@ -41,8 +41,7 @@
 
 ## 🔄 Диаграмма состояний
 
-<img width="1451" height="1788" alt="123" src="https://github.com/user-attachments/assets/eafc50b1-8ccc-4880-88f2-c44f51bbf317" />
-
+<img width="603" height="1788" alt="123 (2)" src="https://github.com/user-attachments/assets/ef9eecb9-2f93-47e3-895e-cb4f94d3281a" />
 
 ### Программа
 
