@@ -41,7 +41,8 @@
 
 ## 🔄 Диаграмма состояний
 
-<img width="1451" height="1788" alt="Диаграмма без названия drawio (9)" src="https://github.com/user-attachments/assets/9c8098bd-c975-4c85-b038-3b549251a0a8" />
+<img width="1451" height="1788" alt="123" src="https://github.com/user-attachments/assets/eafc50b1-8ccc-4880-88f2-c44f51bbf317" />
+
 
 ### Программа
 
